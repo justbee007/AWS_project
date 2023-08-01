@@ -1,4 +1,5 @@
 package com.example.aws_project.models;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,7 +22,7 @@ public class User {
     private Long id;
     @Column(unique=true)
     private String emailaddress;
-
+    @JsonIgnore
     private String password;
     private String first_name;
     private String last_name;
